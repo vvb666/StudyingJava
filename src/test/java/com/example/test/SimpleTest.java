@@ -11,6 +11,7 @@ public class SimpleTest extends BaseSimpleTest {
     private MainPage Page = new MainPage();
 
     private String email = "feivinks@mail.com";
+    private String text =  "Welcome to GitHub!";
 
 
 
@@ -21,7 +22,7 @@ public class SimpleTest extends BaseSimpleTest {
         open("");
         Page.setEmail(email);
         Page.ckickSignup();
-        Page.checkTextContains();
+        Page.checkTextContains(text);
 
 
     }

@@ -20,8 +20,8 @@ public class MainPage  extends BasePage{
     public void ckickSignup(){
         click(signBtn);
     }
-    public void checkTextContains(){
-        checkText (signUp,"Welcome to GitHub!");
+    public void checkTextContains(String text){
+        checkText (signUp,text);
     }
 
 

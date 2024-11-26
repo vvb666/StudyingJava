@@ -3,6 +3,7 @@ package com.example.test;
 
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
@@ -25,13 +26,7 @@ public class BaseSimpleTest {
     public void closeDriver(){
         WebDriver driver = WebDriverRunner.getWebDriver();
         if (driver != null) {
-            try {
-                // Устанавливаем таймаут в 5 секунд (5000 миллисекунд)
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            driver.quit();
+            Selenide.closeWebDriver();
         }
     }
 }
